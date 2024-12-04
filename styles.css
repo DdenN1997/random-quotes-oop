@@ -11,12 +11,25 @@ body {
 }
 
 .btn {
-  padding: 10px 20px;
-  font-size: 16px;
   color: white;
   border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  margin: 0px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
-  border-radius: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
@@ -27,15 +40,12 @@ body {
   background-color: #0056b3;
 }
 
-.btn-danger {
-  background-color: transparent;
-  color: red;
-  border: 2px solid red;
+.btn-secondary {
+  background-color: #28a745; /* Зелёный цвет */
 }
 
-.btn-danger:hover {
-  background-color: red;
-  color: white;
+.btn-secondary:hover {
+  background-color: #218838; /* Тёмно-зелёный при наведении */
 }
 
 .quote {
@@ -51,37 +61,4 @@ body {
 .quote-author {
   font-weight: bold;
   margin-block-start: 0.7em;
-}
-
-.favorites-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.favorite-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  color: darkslategray;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 8px;
-  width: 25%;
-}
-
-.favorite-card-content {
-  flex: 1;
-  padding: 0px 3px;
-}
-
-.favorite-card-author {
-  font-style: italic;
-}
-
-.star-icon {
-  font-size: 30px;
-  color: yellow;
-  vertical-align: middle;
-  cursor: pointer;
 }
